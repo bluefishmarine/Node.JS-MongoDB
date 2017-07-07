@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 // var connectionUrl = "mongodb://Gary:werto5678@ds151242.mlab.com:51242/bluefishmarineyelpcamp?authSource=admin";
 // mongoose.connect(connectionUrl);
 
-mongoose.connect(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL2);
 
 /****Campgrounds Schema******/
 var campgroundSchema = new mongoose.Schema({
