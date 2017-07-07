@@ -19,7 +19,11 @@ var commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index");
 
 // seedDB();
-mongoose.connect("mongodb://localhost/yelp_camp");
+// var connectionUrl = "mongodb://Gary:werto5678@ds151242.mlab.com:51242/bluefishmarineyelpcamp?authSource=admin";
+mongoose.connect('mongodb://${Gary}:${werto5678}@${ds151242.mlab.com:51242/}/${bluefishmarineyelpcamp}?authMechanism=SCRAM-SHA-1');
+// mongoose.connect("mongodb://bluefishmarine:werto%5678@ds151242.mlab.com:51242/bluefishmarineyelpcamp");
+
+// mongoose.connect("mongodb://localhost/yelp_camp");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.set("view engine","ejs");
