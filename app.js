@@ -18,12 +18,13 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index");
 
-console.log(process.env.DATABASEURL);
-// var connectionUrl = "mongodb://Gary:werto5678@ds151242.mlab.com:51242/bluefishmarineyelpcamp?authSource=admin";
-mongoose.connect('mongodb://${Gary}:${werto5678}@${ds151242.mlab.com:51242/}/${bluefishmarineyelpcamp}?authMechanism=SCRAM-SHA-1');
-// mongoose.connect("mongodb://bluefishmarine:werto%5678@ds151242.mlab.com:51242/bluefishmarineyelpcamp");
 
+// var connectionUrl = "mongodb://Gary:werto5678@ds151242.mlab.com:51242/bluefishmarineyelpcamp?authSource=admin";
+//mongoose.connect('mongodb://${Gary}:${werto5678}@${ds151242.mlab.com:51242/}/${bluefishmarineyelpcamp}?authMechanism=SCRAM-SHA-1');
+// mongoose.connect("mongodb://bluefishmarine:werto%5678@ds151242.mlab.com:51242/bluefishmarineyelpcamp");
 // mongoose.connect("process.env.DATABASEURL");
+mongoose.connect(process.env.DATABASEURL);
+
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.set("view engine","ejs");
