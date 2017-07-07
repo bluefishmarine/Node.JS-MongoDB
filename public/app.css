@@ -1,0 +1,19 @@
+h1 {
+    color: rgb(245,100,40);
+}
+
+.thumbnail{
+    padding:0px;
+}
+
+.thumbnail img{
+    width:100%;
+}
+
+.caption-full{
+    padding: 9px;
+}
+
+#delete-form, #commentDelete{
+    display: inline;
+} 
